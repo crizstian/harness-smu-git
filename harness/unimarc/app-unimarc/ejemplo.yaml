@@ -1,0 +1,24 @@
+pipeline:
+  name: ejemplo
+  identifier: ejemplo
+  projectIdentifier: app_unimarc_JL5i
+  orgIdentifier: unimarc_JL5i
+  tags: {}
+  stages:
+    - stage:
+        name: Despliegue De Servicio
+        identifier: Despliegue_De_Servicio
+        template:
+          templateRef: account.kubernetes_deployments_WRWc
+          versionLabel: "1"
+          templateInputs:
+            type: Deployment
+            spec:
+              service:
+                serviceRef: <+input>
+                serviceInputs: <+input>
+              environment:
+                environmentRef: <+input>
+                environmentInputs: <+input>
+                serviceOverrideInputs: <+input>
+                infrastructureDefinitions: <+input>
