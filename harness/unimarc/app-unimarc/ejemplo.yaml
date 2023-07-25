@@ -10,7 +10,7 @@ pipeline:
         identifier: Despliegue_De_Servicio
         template:
           templateRef: account.kubernetes_deployments_WRWc
-          versionLabel: "1"
+          versionLabel: "2"
           templateInputs:
             type: Deployment
             spec:
